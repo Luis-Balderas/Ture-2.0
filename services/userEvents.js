@@ -1,5 +1,5 @@
 const MongoLib = require('../lib/mongo');
-const userEvents = require('../utils/schemas/userEvents');
+
 
 class UserEventsService {
     constructor() {

@@ -41,16 +41,16 @@ const EventsMock = [
 ];
 
 function filteredEventsMock(tag) {
-  return eventsMock.filter(event => event.tags.includes(tag));
+  return EventsMock.filter(event => event.tags.includes(tag));
 }
 
 class EventsServiceMock {
   async getEvents() {
-    return Promise.resolve(eventsMock)
+    return Promise.resolve(EventsMock)
   }
 
   async createEvent() {
-    return Promise.resolve(eventsMock[0]);
+    return Promise.resolve(EventsMock[0]);
   }
 }
 

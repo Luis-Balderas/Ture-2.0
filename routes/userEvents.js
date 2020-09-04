@@ -3,7 +3,6 @@ const passport = require('passport');
 
 const UserEventsService = require('../services/userEvents');
 const validationHandler = require('../utils/middleware/validationHandler');
-const scopesValidationHandler = require('../utils/middleware/scopesValidationHandler');
 
 const { eventIdSchema } = require('../utils/schemas/events');
 const { userIdSchema } = require('../utils/schemas/users');
@@ -18,9 +17,8 @@ function userEventsApi(app) {
     const userEventsService = new UserEventsService();
 
     router.get('/', 
-    passport.authenticate('jwt', { session: false}),
-    scopesValidationHandler([' read: user-events ']),
-    validationHandler({ userId: userIdSchema}, 'query'),
+    passport.authenticate('jwt', { session: false }),
+    validationHandler({ userId: userIdSchema }, 'query'),
     async function(req, res, next) {
         const { userId } = req.query;
 
@@ -37,10 +35,9 @@ function userEventsApi(app) {
     }
   );
 
-  router.post('/', 
-  passport.authenticate('jwt', { session: false}),
-  scopesValidationHandler([' create: user-events ']),
-  validationHandler(createUserEventSchema), 
+  router.post('/',
+  passport.authenticate('jwt', { session: false }),
+  validationHandler(createUserEventSchema),  
   async function(req, res, next) {
     const { body: userEvent } = req;
 
@@ -59,8 +56,7 @@ function userEventsApi(app) {
   });
 
   router.delete('/:userEventId', 
-  passport.authenticate('jwt', { session: false}), 
-  scopesValidationHandler([' delete: user-events ']),
+  passport.authenticate('jwt', { session: false }),
   validationHandler({ userEventId: eventIdSchema }, 'params'),
   async function(req, res, next) {
     const { userEventId } = req.params;
