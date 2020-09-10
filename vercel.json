@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "builds": [{
+    "src": "server.js",
+    "use": "@vercel/node"
+  }],
+  "routes": [{
+    "src": "/(.*)",
+    "dest": "/server.js"
+  }],
+  "env": {
+    "PORT": "3000",
+    "CORS": "*",
+    "DB_USER": "@ture-db-user",
+    "DB_PASSWORD": "@ture-db-password",
+    "DB_HOST": "@ture-db-host",
+    "DB_NAME": "@ture-db-name",
+    "DEFAULT_ADMIN_PASSWORD": "@ture-db-admin",
+    "DEFAULT_USER_PASSWORD": "@ture-db-user_pass",
+    "AUTH_JWT_SECRET": "@ture-db-jwt",
+    "PUBLIC_API_KEY_TOKEN": "@ture-db-key-public",
+    "ADMIN_API_KEY_TOKEN": "@ture-db-key-admin"
+  }
+}
