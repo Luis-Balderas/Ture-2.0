@@ -12,30 +12,30 @@ const eventOcupationSchema = joi.number().max(30);
 const eventcreatedAt = joi.date();
 
 const createEventSchema = {
-  name: eventNameSchema.required(),
-  images: eventImagesSchema.required(),
-  description: eventDescriptionSchema.required(),
-  location: eventLocationSchema.required(),
-  price: eventPriceSchema.required(),
-  startDate: eventStartDateSchema.required(),
-  endDate: eventEndDateSchema.required(),
-  ocupation: eventOcupationSchema.required(),
-  createdAt: eventcreatedAt,
+ name: eventNameSchema.required(),
+ images: eventImagesSchema.required(),
+ description: eventDescriptionSchema.required(),
+ location: eventLocationSchema.required(),
+ price: eventPriceSchema.required(),
+ startDate: eventStartDateSchema.required(),
+ endDate: eventEndDateSchema.required(),
+ ocupation: eventOcupationSchema.required(),
+ createdAt: eventcreatedAt,
 };
 
 const updateEventSchema = {
-  name: eventNameSchema,
-  images: eventImagesSchema,
-  description: eventDescriptionSchema,
-  location: eventLocationSchema,
-  price: eventPriceSchema,
-  startDate: eventStartDateSchema,
-  andDate: eventEndDateSchema,
-  ocupation: eventOcupationSchema,
+ name: eventNameSchema,
+ images: eventImagesSchema,
+ description: eventDescriptionSchema,
+ location: eventLocationSchema,
+ price: eventPriceSchema,
+ startDate: eventStartDateSchema,
+ andDate: eventEndDateSchema,
+ ocupation: eventOcupationSchema,
 };
 
 module.exports = {
-  eventIdSchema,
-  createEventSchema,
-  updateEventSchema,
+ eventIdSchema,
+ createEventSchema,
+ updateEventSchema,
 };
