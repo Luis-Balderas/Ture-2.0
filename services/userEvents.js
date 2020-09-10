@@ -23,7 +23,7 @@ class UserEventsService {
     async deleteUserEvent({ userEventId }) {
         const deletedUserEventId = await this.mongoDB.delete(this.collection, userEventId);
 
-        return deleteUserEvent;
+        return deletedUserEventId;
     } 
 }
 

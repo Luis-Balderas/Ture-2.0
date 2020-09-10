@@ -8,6 +8,8 @@ const { config } = require('./config/index');
 const authApi = require('./routes/auth');
 const eventsApi = require('./routes/events.js');
 const userEventsApi = require('./routes/userEvents.js');
+const ticketApi = require('./routes/ticket.js');
+const payment = require('./routes/payment.js');
 
 const {
   logErrors,
@@ -25,6 +27,8 @@ app.use(cors());
 authApi(app);
 eventsApi(app);
 userEventsApi(app);
+ticketApi(app);
+payment(app);
 
 app.use(notFoundHandler);
 

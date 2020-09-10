@@ -60,12 +60,7 @@ function eventsApi(app) {
 
   router.get(
     '/:eventId',
-    validationHandler(
-      {
-        eventId: eventIdSchema,
-      },
-      'params'
-    ),
+    validationHandler( { eventId: eventIdSchema,}, 'params'),
     async function (req, res, next) {
       const { eventId } = req.params;
       try {
@@ -111,12 +106,7 @@ function eventsApi(app) {
     passport.authenticate('jwt', {
       session: false,
     }),
-    validationHandler(
-      {
-        eventId: eventIdSchema,
-      },
-      'params'
-    ),
+    validationHandler( {eventId: eventIdSchema,},'params'),
     validationHandler(updateEventSchema),
     async function (req, res, next) {
       const { body: event } = req;
@@ -142,12 +132,7 @@ function eventsApi(app) {
     passport.authenticate('jwt', {
       session: false,
     }),
-    validationHandler(
-      {
-        eventId: eventIdSchema,
-      },
-      'params'
-    ),
+    validationHandler({eventId: eventIdSchema,}, 'params'),
     async function (req, res, next) {
       const { eventId } = req.params;
       try {

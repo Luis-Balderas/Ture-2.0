@@ -1,6 +1,7 @@
 const joi = require('@hapi/joi');
 
 const eventIdSchema = joi.string().regex(/^[0-9a-fA-F]{24}$/);
+
 const eventNameSchema = joi.string().max(80);
 const eventImagesSchema = joi.array().items(joi.string());
 const eventDescriptionSchema = joi.string().max(750);

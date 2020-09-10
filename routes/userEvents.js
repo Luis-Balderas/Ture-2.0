@@ -8,6 +8,8 @@ const { eventIdSchema } = require('../utils/schemas/events');
 const { userIdSchema } = require('../utils/schemas/users');
 const { createUserEventSchema } = require('../utils/schemas/userEvents');
 
+
+
 require('../utils/auth/strategies/jwt');
 
 function userEventsApi(app) {
