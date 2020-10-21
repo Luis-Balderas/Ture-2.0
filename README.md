@@ -17,4 +17,4 @@ Autores
 Desarrollador Backend-Frontend  Carol Masmelo
 Desarrollador Backend Luis Balderas.
 
-Gratitud Platzi Master Program y sus mentores, coaches y líderes, especialmente a nuestra Master Coach Estaefany Aguilar
+Gratitud Platzi Master Program y sus mentores, coaches y líderes, especialmente a nuestra Master Coach Ana Belisa Martines
